@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sureshrajupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sureshrajupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: sureshrajupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sureshrajupipelinesjavascriptdocker 
+          image: containerregistrymy.azurecr.io/sureshrajupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
